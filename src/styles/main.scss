@@ -11,11 +11,21 @@ body {
 .categoryCard {
   width: 48%;
   height: 100px;
-  margin: .1%
+  margin: 1%
 }
 
 .typeCard {
   width: 23%;
   height: 100px;
-  margin: .1%
+  margin: 1%
+}
+
+.productCard {
+  width: 31%;
+  height: fit-content;
+  margin: 1%
+}
+
+.productCard p {
+  font-size: .8rem
 }
