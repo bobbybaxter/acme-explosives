@@ -7,10 +7,11 @@ import util from '../../helpers/util';
 import types from '../types/types';
 
 const seeTypeDiv = (e) => {
+  const categoryName = e.target.closest('.card').firstChild.innerText;
   const categoryId = e.target.closest('.card').id;
   $('#categories-page').addClass('hide');
   $('#types-page').removeClass('hide');
-  types.initTypes(categoryId);
+  types.initTypes(categoryName, categoryId);
 };
 
 const bindEvents = () => {
@@ -23,7 +24,7 @@ const bindEvents = () => {
 const writeCategories = (categories) => {
   let domString = '';
   $.each(categories, (i) => {
-    domString += `<div id="${categories[i].id}" class="card categoryCard d-flex flex-column justify-content-between">`;
+    domString += `<div id="${categories[i].id}" class="card categoryCard d-flex flex-column justify-content-between shadow">`;
     domString += `<h5>${categories[i].name}</h5>`;
     domString += `<a class="btn btn-outline-light see-types">${categories[i].types.length} types</a>`;
     domString += '</div>';
