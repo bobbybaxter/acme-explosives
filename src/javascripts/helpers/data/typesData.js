@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const loadTypes = () => axios.get('../db/types.json');
+
 const loadTypesFromCategory = categoryId => new Promise((resolve, reject) => {
   axios.get('../db/types.json')
     .then((resp) => {
@@ -25,4 +27,4 @@ const getTypesForEachCategory = categories => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { loadTypesFromCategory, getTypesForEachCategory };
+export default { loadTypesFromCategory, getTypesForEachCategory, loadTypes };

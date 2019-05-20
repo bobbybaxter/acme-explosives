@@ -7,15 +7,36 @@
   <title>Acme Explosives</title>
 </head>
 <body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Acme Explosives</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div id="navbar-categories" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            </div>  
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <!--Categories Page-->
   <div id="categories-page" class="container">
     <h1>Categories</h1>
     <div id="categories" class="d-flex flex-row justify-content-around text-center"></div>
   </div>
+  <!--Types Page-->
   <div id="types-page" class="container hide">
     <h1>Types</h1>
     <button id="toCategoriesBtn" class="btn btn-primary">Back</button>
     <div id="types" class="d-flex flex-row flex-wrap justify-content-around text-center"></div>
   </div>
+  <!--Products Page-->
   <div id="products-page" class="container hide">
     <h1>Products</h1>
     <button id="toTypesBtn" class="btn btn-primary">Back</button>
