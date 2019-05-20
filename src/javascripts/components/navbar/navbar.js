@@ -8,7 +8,9 @@ const seeTypeDiv = (e) => {
   const categoryName = e.target.innerText;
   const categoryId = e.target.id;
   $('#categories-page').addClass('hide');
+  $('#home-page').addClass('hide');
   $('#types-page').removeClass('hide');
+  $('#products-page').addClass('hide');
   typesModule.initTypes(categoryName, categoryId);
 };
 

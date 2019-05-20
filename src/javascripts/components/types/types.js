@@ -8,6 +8,7 @@ const seeProductsDiv = (e, categoryName) => {
   const typeId = e.target.closest('.card').id;
   $('#products-page').removeClass('hide');
   $('#types-page').addClass('hide');
+  $('#home-page').addClass('hide');
   products.initProducts(categoryName, typeName, typeId);
 };
 
@@ -25,9 +26,10 @@ const bindEvents = (categoryName) => {
 const writeTypes = (categoryName, types) => {
   let domString = '';
   $.each(types, (i) => {
+    console.error(types);
     domString += `<div id="${types[i].id}" class="card typeCard d-flex flex-column justify-content-between shadow">`;
     domString += `<h5>${types[i].name}</h5>`;
-    domString += '<a class="btn btn-outline-light see-products">Products</a>';
+    domString += '<a class="btn btn-outline-light see-products small-font">See Products</a>';
     // domString += `<a class="btn btn-outline-light see-types>${types[i].types.length}</a>`;
     domString += '</div>';
   });
