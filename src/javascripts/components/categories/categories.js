@@ -11,6 +11,7 @@ const seeTypeDiv = (e) => {
   const categoryId = e.target.closest('.card').id;
   $('#categories-page').addClass('hide');
   $('#types-page').removeClass('hide');
+  $('#home-page').addClass('hide');
   types.initTypes(categoryName, categoryId);
 };
 
@@ -26,7 +27,7 @@ const writeCategories = (categories) => {
   $.each(categories, (i) => {
     domString += `<div id="${categories[i].id}" class="card categoryCard d-flex flex-column justify-content-between shadow">`;
     domString += `<h5>${categories[i].name}</h5>`;
-    domString += `<a class="btn btn-outline-light see-types">${categories[i].types.length} types</a>`;
+    domString += `<a class="btn btn-outline-light see-types small-font">${categories[i].types.length} types</a>`;
     domString += '</div>';
   });
   util.printToDom('categories', domString);

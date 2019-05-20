@@ -6,6 +6,7 @@ const bindEvents = () => {
   $('#toTypesBtn').on('click', () => {
     $('#types-page').removeClass('hide');
     $('#products-page').addClass('hide');
+    $('#hide-page').removeClass('hide');
   });
 };
 
